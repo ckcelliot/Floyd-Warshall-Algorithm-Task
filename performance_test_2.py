@@ -1,8 +1,8 @@
-import time
+import timeit
 import sys
 import itertools
 
-# Import file1.py and file2.py as modules
+# Import floyd_rec.py and floyd.py as modules
 import floyd_rec
 import Geek4Geek
 
@@ -17,25 +17,17 @@ graph = [
 MAX_LENGTH = len(graph[0])
 
 # Performance test for file1.py
-start_time = time.time()
+def floyd_rec_perf():
+    floyd_rec.floyd(graph)
 
-# Call the floyd function in file1.py to compute shortest path distances
-floyd_rec.floyd(graph)
-
-# Measure the time taken for the computation
-end_time = time.time()
-elapsed_time_file1 = end_time - start_time
+elapsed_time_file1 = timeit.timeit(floyd_rec_perf, number=1)
 
 # Performance test for file2.py
-start_time = time.time()
+def Geek4Geek_perf():
+    Geek4Geek.floydWarshall(graph)
 
-# Call the floyd function in file2.py to compute shortest path distances
-Geek4Geek.floydWarshall(graph)
-
-# Measure the time taken for the computation
-end_time = time.time()
-elapsed_time_file2 = end_time - start_time
+elapsed_time_file2 = timeit.timeit(Geek4Geek_perf, number=1)
 
 # Print the results
-print("Elapsed time for Floyed Algorithm using Recursion: {} seconds".format(elapsed_time_file1))
-print("Elapsed time for Floyed Algorithm from GeeksForGeeks: {} seconds".format(elapsed_time_file2))
+print("Elapsed time for Floyd Algorithm using Recursion: {} seconds".format(elapsed_time_file1))
+print("Elapsed time for Floyd Algorithm using Geek4Geek: {} seconds".format(elapsed_time_file2))
