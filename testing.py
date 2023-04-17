@@ -2,8 +2,8 @@ import unittest
 import sys
 
 # Import the functions to be tested
-from fiv_rec import floyd_recursive
-from fiv import floyd
+from floyd_rec import floyd_recursive
+from floyd import floyd
 
 class TestFloydAlgorithm(unittest.TestCase):
 
@@ -18,7 +18,7 @@ class TestFloydAlgorithm(unittest.TestCase):
         ]
         self.MAX_LENGTH = len(self.graph[0])
 
-    def test_fiv_rec(self):
+    def test_floyd_rec(self):
         # Test case 1: Start and end nodes are the same
         distance = [[self.NO_PATH] * self.MAX_LENGTH for _ in range(self.MAX_LENGTH)]
         intermediate = 0
