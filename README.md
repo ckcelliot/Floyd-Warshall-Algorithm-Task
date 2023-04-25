@@ -13,9 +13,9 @@ Task Requirements:
 Report Requirements:
 1. Discuss how the application was built
 
-2. How to create the tests and the coverage of your tests
+2. How to create the tests and the coverage of the tests
 
-3. Try to have a hypothesis to explain the differences between the performance of the iterative version on the PDF and your own recursive version
+3. Try to have a hypothesis to explain the differences between the performance of the iterative version on the PDF and the own recursive version
 
 
 
